@@ -1,0 +1,61 @@
+/* pages/shopping/shopping.wxss */
+.shopping_back{
+  width: 100%;
+  height: 100vh;
+  background: #F8F8FF;
+  padding-top: 2%;
+}
+/* 购物车列表 */
+.shopping_list{
+  width: 90%;
+  margin-left: 2%;
+  padding: 3% 3% 3% 3%;
+  background: white;
+  display: flex;
+  border-radius: 20rpx;
+  margin-bottom: 2%;
+}
+.shopping_list_left{
+  width: 30%;
+}
+.shopping_list_left image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+.shopping_list_right{
+  width: 70%;
+}
+.shopping_list_right_top{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10%;
+}
+/* 支付 */
+.bottom{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background: white;
+}
+.pay{
+  width: 96%;
+  margin-left: 2%;
+  display: flex;
+  padding: 2% 0 2% 0;
+  font-size: 30rpx;
+}
+.pay_left{
+  width: 40%;
+}
+.pay_center{
+  width: 40%;
+  padding-top: 2%;
+}
+.pay_center text{
+  /* color: #FFF68F; */
+  color: red;
+}
+.pay_right{
+  width: 20%;
+}

@@ -1,0 +1,213 @@
+<view>
+  <!-- 自定义头部 -->
+  <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+    <view class="nav-logo">
+      <image src="http://m.qpic.cn/psc?/V12iywoj40T291/qWkkGOdvaHRbO0s2SzmJ0JJYSLnfKy1Pf0yzq3xMgG9Gk8i02AqtDQFXMy4hlqFO6yd7SzvQ9H28fB5Lhj0bxA!!/b&bo=gABJAAAAAAADB.s!&rf=viewer_4" ></image>
+    </view>
+      <view class="INinputheader">
+        <icon class="INsearchicon" type="search" size="12"/>
+        <input class="weui-input" placeholder="搜索商品"/>
+      </view>
+    </view>
+
+  </view>
+  <!-- 头部信息 -->
+  <view class="index-head" >
+    <view class="head_img">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="head_name">
+     <open-data type="userNickName" open-gid="userNickName">{{userNickName}}</open-data>
+     <view class="name_dz" bindtap="wz">
+      <image  src="http://m.qpic.cn/psc?/V12iywoj40T291/OgsY8p8GsL2M2s50.OYmeiVZQ.WQVva*YlM1tnhWDBaaxx7Y0WJRcotZJ3lBlTKeE7VmKd4rQBOXLX2VMALmGhC02ujRrzkH1wHNyndbz2Q!/b&bo=EAAQAAAAAAADFzI!&rf=viewer_4&t=5"></image>
+      <text>{{address}}</text>
+     </view>
+    </view>
+    <view bindtap="fxhy" class="head_right_l">
+        <view>
+          <image  src="http://a1.qpic.cn/psc?/V12iywoj40T291/qWkkGOdvaHRbO0s2SzmJ0FUsooTsk1.yQgQH9IMpyuqQajt.qKgAcTNf8yBuTlpyLyRjJwXujCU**DX61jmYYw!!/b&ek=1&kp=1&pt=0&bo=IAAgAAAAAAADFzI!&tl=1&vuin=1427493832&tm=1586743200&sce=60-3-3&rf=viewer_4&t=5"></image> 
+        </view>
+        <view><text>分享</text></view>
+    </view>
+    <view class="head_right_l">
+        <view><image  src="http://m.qpic.cn/psc?/V12iywoj40T291/OgsY8p8GsL2M2s50.OYmepMqL.3cPch4Fqc2x*Z7wAmPD1pR.wLyk*GZGfSOgDRJK0GCSvz8nv39Sgq.4iIzSuJGt4U16*c3VBxmiUmEZ*Q!/b&bo=IAAgAAAAAAADFzI!&rf=viewer_4&t=5"></image> </view>
+        <view><text>附近团长</text></view>
+    </view>
+  </view>
+  <!-- 分享好友 -->
+  <van-action-sheet show="{{ show }}"bind:close="onClose">
+    <view class="fx">
+      <view class="fx_head">分享</view>
+      <view class="fx_but">
+        <view>
+          <van-button open-type="share" icon="http://m.qpic.cn/psc?/V12iywoj40T291/OgsY8p8GsL2M2s50.OYmeo97u4KleYZTgnPPOTZxThVpr6gN.GtHmqCo2G.*.KCVuHHJv0cfEWRinA0RmcXhn5DPP.5csD1P.XTOYgX5afs!/b&bo=9AE4AQAAAAARF.w!&rf=viewer_4" size="small" ></van-button>
+          <view style="margin-left: 25%;">微信好友</view>
+        </view>
+        <view>
+        	<!-- <canvas class="can" canvas-id="mycan"></canvas> -->
+          <van-button bindtap="bye" icon="http://m.qpic.cn/psc?/V12iywoj40T291/OgsY8p8GsL2M2s50.OYmepUnvxNi47LzvdbaMMs8KKUDes6omI*Dh0bnvbQODWgeH3r5LQh5vRsZEzlRDb2GMQAJLHXg.ab4PpxK77muWmk!/b&bo=9AH0AQAAAAARFyA!&rf=viewer_4" size="small" ></van-button>
+          <view style="margin-left: 25%;">生成海报</view>
+        </view>
+      </view>
+      
+    </view>
+  </van-action-sheet>
+  <!-- 轮播 -->
+  <view zy_swipe>
+    <swiper class='lb' indicator-dots='true' autoplay='true' interval='5000' duration='700' circular='true'>
+      <block wx:for="{{swiperList}}"  wx:key="index">
+      <swiper-item>
+        <image src='{{item}}' class='u-img-slide' mode='aspectFill'></image>
+      </swiper-item>
+      </block>
+    </swiper>
+  </view>
+<!-- 下方背景 -->
+<view class="bottom">
+
+<!-- 今日团购 -->
+    <view class="index_tg">
+    <view class="tg_left">
+      <text>今日团购</text>
+    </view>
+    <!-- <view class="tg_center"> -->
+       <view class='tg_center' wx:if="{{countDown}}">
+       <text class="tg_center_top" >距结束</text>
+       <text class="tg_center_bottom">{{hou}}</text>：<text class="tg_center_bottom">{{min}}</text>：<text class="tg_center_bottom">{{sec}}</text></view>
+    <!-- </view> -->
+    <view class="tg_right">
+      <text>武汉加油，中国加油！</text>
+    </view>
+  <view>
+</view>
+</view>
+<!-- 团购导航栏 -->
+  <view class="tg_nav" >
+    <block wx:for="{{nav}}" wx:key="index" >
+      <view class="tg_nav_img">
+      <image src="{{item.url}}"></image>
+      <view>{{item.name}}</view>
+      </view>
+    </block>
+  </view>
+<!-- 团购导航栏-E -->
+<!-- 限时秒杀 -->
+  <view class="index_ms" >
+    <view class="ms_top">
+      <view class="ms_top_left"><view>限时</view> <view>秒杀</view> </view>
+      <view bindtap="jiu" class="ms_top_center"><view>09:00</view> <view>已开抢</view> </view>
+      <view bindtap="shisan" class="ms_top_center"><view>13:00</view> <view>疯抢中</view> </view>
+      <view bindtap="shiqi" class="ms_top_center"><view>17:00</view> <view>即将开始</view> </view>
+      <view class="ms_top_right">更多</view>
+    </view>
+    <view class="ms_bottom"  >
+      <view class="ms_bottom_left"><image src="{{shopping_url}}" ></image></view>
+      <view class="ms_bottom_right">
+        <view style="font-size: 30rpx;color: black;font-weight: bold;">{{shopping_name}}</view>
+        <view>{{shopping_ms}}</view>
+        <view class="jd">
+          <progress percent="{{shopping_jd}}" color="#FF6600" backgroundColor="#FFCCAA" border-radius="20rpx" />已抢{{shopping_num}}份
+        </view>
+        <view style="color: red;font-size:35rpx;">￥{{shopping_price}}</view>
+      </view>
+      <view class="ms_bottom_center">
+        <view  class="index_but" >{{shopping_but}}</view>
+      </view>
+    </view>
+  </view>
+<!-- 限时秒杀-E -->
+<!-- 果蔬专区 -->
+  <view class="index_gs">
+    <view class="gs_left">
+      <view>果蔬专区</view>
+      <view class="gs_left_top">新鲜看得见</view>
+      <view class="gs_left_bottom">GO></view>
+    </view>
+    <view class="gs_right">
+      <image src="http://m.qpic.cn/psc?/V12iywoj40T291/qWkkGOdvaHRbO0s2SzmJ0K2IRlZlNaUJcxOo5.lf4ClG5APdokW7ttgo9E0KcAFA5j4SmECWmAeSrETTQHnPcg!!/b&bo=9AHjAQAAAAARByc!&rf=viewer_4&t=5"></image>
+      <image src="http://m.qpic.cn/psc?/V12iywoj40T291/OgsY8p8GsL2M2s50.OYmeuvmX5S2N8aaNovj64DTwBP8LKqTrC461StT3S7GlQgjI.G1QbeNiN6bm1ifghcqBXtLIoN8NIjQvKFSSt0y8C8!/b&bo=3wEsAQAAAAARF9M!&rf=viewer_4&t=5"></image>
+    </view> 
+  </view>
+<!-- 果蔬专区-E -->
+<!-- 商品标签栏 -->
+  <view class="shopping">
+    <van-tabs color="#42E61A" sticky>
+      <van-tab title="热卖">
+        <block wx:for="{{shopping}}" wx:key="index" >
+        <view class="shopping_content" bindtap="ms_but" 
+        data-url="{{item.url}}"data-name="{{item.name}}" data-num="{{item.num}}" 
+        data-ms="{{item.ms}}"data-price="{{item.price}}" data-bq="{{item.bq}}" >
+          <view class="content_left">
+            <image src="{{item.url}}"></image>
+            <view class="content_left_bottom">累计销量{{item.num}}</view>
+          </view>
+          <view class="content_right">
+            <view>{{item.name}}</view>
+            <view class="content_right_cent">{{item.ms}}</view>
+            <view class="content_right_top">{{item.bq}}</view>
+            <view class="content_right_bottom">￥{{item.price}} <van-button class="content_but" type="primary" size="mini">立即购买</van-button></view>
+          </view>
+        </view>
+        </block>   
+      </van-tab>
+      <van-tab title="包邮到家">内容 2</van-tab>
+      <van-tab title="荟享生活">
+        <block wx:for="{{shopping}}" wx:key="index" >
+        <view class="shopping_content" >
+          <view class="content_left">
+            <image src="{{item.url}}"></image>
+            <view class="content_left_bottom">累计销量{{item.num}}</view>
+          </view>
+          <view class="content_right">
+            <view>{{item.name}}</view>
+            <view class="content_right_cent">{{item.ms}}</view>
+            <view class="content_right_top">{{item.bq}}</view>
+            <view class="content_right_bottom">￥{{item.price}} <van-button class="content_but" type="primary" size="mini">立即购买</van-button></view>
+          </view>
+        </view>
+        </block>  
+      </van-tab>
+      <van-tab title="直播商品">内容 4</van-tab>
+      <van-tab title="新人专享">内容 4</van-tab>
+      <van-tab title="批发馆">
+        <block wx:for="{{shopping}}" wx:key="index" >
+        <view class="shopping_content" >
+          <view class="content_left">
+            <image src="{{item.url}}"></image>
+            <view class="content_left_bottom">累计销量{{item.num}}</view>
+          </view>
+          <view class="content_right">
+            <view>{{item.name}}</view>
+            <view class="content_right_cent">{{item.ms}}</view>
+            <view class="content_right_top">{{item.bq}}</view>
+            <view class="content_right_bottom">￥{{item.price}} <van-button class="content_but" type="primary" size="mini">立即购买</van-button></view>
+          </view>
+        </view>
+        </block>  
+      </van-tab>
+      <van-tab title="爆款生鲜">
+        <block wx:for="{{shopping}}" wx:key="index" >
+        <view class="shopping_content">
+          <view class="content_left">
+            <image src="{{item.url}}"></image>
+            <view class="content_left_bottom">累计销量{{item.num}}</view>
+          </view>
+          <view class="content_right">
+            <view>{{item.name}}</view>
+            <view class="content_right_cent">{{item.ms}}</view>
+            <view class="content_right_top">{{item.bq}}</view>
+            <view class="content_right_bottom">￥{{item.price}} <van-button class="content_but" type="primary" size="mini">立即购买</van-button></view>
+          </view>
+        </view>
+        </block>  
+      </van-tab>
+    </van-tabs>
+  </view>
+
+<!-- 商品标签栏-E -->
+
+
+
+</view>
+</view>

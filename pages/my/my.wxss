@@ -1,0 +1,123 @@
+/* pages/my/my.wxss */
+/* 我的头部 */
+.my_head{
+  border-top: 1px solid #E6E6E6;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 35rpx;
+  font-weight: bold;
+  padding-top: 2%;
+}
+.my_head image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.head_left{
+  width: 16%;
+}
+.head_left {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.head_center{
+  margin-left: 2%;
+  width: 70%;
+}
+.head_center_text{
+  margin-top: 2%;
+  font-size: 30rpx;
+  font-weight: normal;
+  color: #999999;
+}
+.head_right{
+  width: 10%;
+}
+.head_right image{
+  width: 70rpx;
+  height: 70rpx;
+}
+/* 背景 */
+.my_back{
+  background-color:#F8F8FF;
+  width: 100%;
+  padding-top: 2%;
+  height: 100vh;
+}
+/* 我的订单 */
+.my_order{
+  width: 96%;
+  margin-left: 2%;
+  background: white;
+  border-radius: 20rpx;
+  margin-bottom: 2%;
+}
+.order_top{
+  display: flex;
+  justify-content: space-between;
+  font-size: 35rpx;
+  font-weight: bold;
+  padding: 4%;  
+}
+.oder_top_text{
+  font-size: 30rpx;
+  font-weight: normal;
+}
+.order_bottom{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  font-size:30rpx ;
+  padding:2% 10% 3% 10%;
+  text-align: center;
+}
+.order_bottom image{
+  width: 60rpx;
+  height: 60rpx;
+}
+/* 邀请好友 */
+.my_friend{
+  width: 96%;
+  margin-left: 2%;
+  border-radius: 20rpx;
+  overflow: hidden;
+  height: 200rpx;
+}
+.my_friend image{
+  width: 100%;
+  height: 200rpx;
+}
+/* 我的菜单 */
+.my_nav{
+  width: 96%;
+  margin-left: 2%;
+  background:white;
+  margin-top: 2%;
+  font-size: 30rpx;
+  border-radius: 20rpx;
+}
+.nav{
+  width: 95%;
+  margin-left: 2.5%;
+  display: flex;
+  justify-content: space-between;
+  padding:4% 0 4% 0;
+  border-bottom: 1px solid #E6E6E6;
+}
+.nav image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.nav_bottom{
+  width: 95%;
+  margin-left: 2.5%;
+  display: flex;
+  justify-content: space-between;
+  padding:4% 0 4% 0;
+}
+.nav_bottom image{
+  width: 20rpx;
+  height: 20rpx;
+}

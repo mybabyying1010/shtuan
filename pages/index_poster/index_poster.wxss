@@ -1,0 +1,18 @@
+/* pages/index_poster/index_poster.wxss */
+.can {
+  width: 100vw;
+  height: 93vh;
+}
+.but{
+  background: linear-gradient(270deg, rgb(245, 244, 240) , rgb(17, 240, 6) );
+  /* background: red; */
+  width: 50%;
+  color: white;
+  font-size: 40rpx;
+  border-radius: 50rpx;
+  height: 100rpx;
+  /* position: absolute; */
+  /* margin-top: -14%; */
+  /* left: 29%; */
+  z-index: 99;
+}

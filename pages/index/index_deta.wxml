@@ -1,0 +1,123 @@
+<!--pages/index/index_deta.wxml-->
+<!-- 头部图片-S -->
+<view class="deta_head">
+  <image src="{{swiperList}}"></image>
+</view>
+<!-- 头部图片-E -->
+<!-- 背景颜色 -->
+<view class="deta_back">
+<!-- 价格-S -->
+  <view class="deta_price">
+    <view class="deta_price_left">
+      <view class="deta_price_left_text">￥{{shopping_price}}</view>
+      <view>剩余66分|已团{{shopping_num}}份</view>
+    </view>
+        <view class='deta_price_right' wx:if="{{countDown}}">
+      <view class='name_left'>距结束还剩</view>
+      <view class='name_right'><text>{{hou}}</text>：<text>{{min}}</text>：<text>{{sec}}</text></view>
+    </view>
+  </view>
+<!-- 价格-E -->
+<!-- 名称 -->
+  <view class="deta_name">
+    <view class="deta_name_left">
+      <view class="deta_name_left_txte">{{shopping_name}}</view>
+      <view>{{shopping_ms}}</view>
+    </view>
+    <view class="deta_name_right">
+      <image src="http://m.qpic.cn/psc?/V12iywoj40T291/qWkkGOdvaHRbO0s2SzmJ0DH1eLBDkuXVHwxhTR88fUR8vVe38H8dgXEvEbJA09mqku8rYGjSR4vKICqwewtKzw!!/b&bo=MAAwAAAAAAADByI!&rf=viewer_4&t=5"></image>
+      <view>分享</view>
+    </view>
+  </view>
+<!-- 名称E -->
+<!-- 配送 -->
+  <view class="deta_ps">
+    <view class="deta_ps_left">配送</view>
+    <view class="deta_ps_right">{{shopping_bq}}</view>
+  </view>
+<!-- 配送-E -->
+<!-- 已选 -->
+  <view class="deta_ps">
+    <view class="deta_ps_left">已选</view>
+    <view class="deta_ps_right">份</view>
+  </view>
+<!-- 已选-E -->
+<!-- 商品详情 -->
+  <view class="deta_shooping">
+    <view class="deta_shooping_head">--商品详情--</view>
+    <view class="deta_shooping_content">
+      <view class="deta_shooping_content_top">
+        <view class="deta_shooping_content_top_left">产地</view>
+        <view class="deta_shooping_content_top_right">非洲</view>
+      </view>
+      <view class="deta_shooping_content_bottom">
+        <view class="deta_shooping_content_top">
+        <view class="deta_shooping_content_top_left">供应商</view>
+        <view class="deta_shooping_content_top_right">浩鑫化工厂</view>
+      </view>
+      </view>
+    </view>
+    <!-- 图片 -->
+    <view class="deta_shopping_img">
+      <view class="img"><image src="{{swiperList}}"></image> </view>
+      <view class="img"><image src="{{swiperList}}"></image> </view>
+      <view class="img"><image src="{{swiperList}}"></image> </view>
+    </view>
+  </view>
+<!-- 商品详情-E -->
+</view>
+<!-- 购买 -->
+<van-goods-action>
+  <van-goods-action-icon
+    icon="wap-home-o"
+    text="首页"
+    bind:click="onClickIcon"
+  />
+  <van-goods-action-icon
+    icon="cart-o"
+    text="购物车"
+    bind:click="onClickIcon"
+  />
+  <van-goods-action-button
+    text="加入购物车"
+    color="#FFCC00"
+    type="warning"
+    bind:click="onClickButton"
+  />
+  <van-goods-action-button
+    color="#66FF00"
+    text="立即购买"
+    bind:click="onClickButton"
+  />
+</van-goods-action>
+<!-- 购买上拉 -->
+<view class="aaa">
+  <van-action-sheet  show="{{ show }}" bind:close="onClose" round = "{{true}}">  
+    <view class="shopping">
+      <view class="shopping_head">
+        <view class="shopping_head_left">
+          <image src="{{swiperList}}"></image>
+        </view>
+        <view class="shopping_head_right">
+          <view class="shopping_head_right_text_name">{{shopping_name}}</view>
+          <view class="shopping_head_right_text_price">￥{{shopping_price}}</view>
+          <view>库存{{shopping_num}}件</view>
+        </view>
+      </view>
+      <view class="shopping_gg">
+        <view>郑州售卖规格属性</view>
+        <view><van-button plain hairline color="{{color}}" round size="mini" bind:click="fen" >份</van-button></view>
+      </view>
+      <view class="shopping_num">
+        <view class="shopping_num_text">购买数量</view>
+        <view><van-stepper value="{{ num }}" integer  bind:change="onChange" /></view>
+      </view>
+      <view class="shopping_bottom">
+        <van-button color="{{color_bottom}}" disabled="{{disabled}}" bind:click="shopping_gm"  size="large" >确定</van-button>
+      </view>
+    </view>
+  </van-action-sheet >
+</view>
+
+
+

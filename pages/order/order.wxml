@@ -1,0 +1,87 @@
+<!--pages/order/order.wxml-->
+<!-- 背景 -->
+<view class="order_back">
+  <!-- 头部 -->
+  <view class="order_head">
+    <view class="order_head_top">
+      <view class="order_head_top_text">团长：<open-data type="userNickName" open-gid="userNickName">{{userNickName}}</open-data></view>
+      <view bindtap="wz">自提点：
+       <image  src="http://m.qpic.cn/psc?/V12iywoj40T291/OgsY8p8GsL2M2s50.OYmeiVZQ.WQVva*YlM1tnhWDBaaxx7Y0WJRcotZJ3lBlTKeE7VmKd4rQBOXLX2VMALmGhC02ujRrzkH1wHNyndbz2Q!/b&bo=EAAQAAAAAAADFzI!&rf=viewer_4&t=5"></image>
+      {{address}}</view>
+    </view>
+    <view class="order_head_bottom">
+      <van-cell-group>
+        <van-field
+          value="{{ username }}"
+          label="购买人"
+          placeholder="请输入用户名"
+        />
+        <van-field
+          value="{{ phone }}"
+          label="手机号"
+          placeholder="请输入手机号"
+          error-message=""
+          border="true"
+        />
+      </van-cell-group>
+    </view>
+    <!-- 添加地址 -->
+  <view class="order_site">
+    人在外地？ 
+    <text bindtap='site'  class="site_text">点击手动添加地址</text>
+  </view>
+  <!-- 添加地址-E -->
+  </view>
+  <!-- 头部-E -->
+  
+  <!-- 商品 -->
+  <view class="order_shopping">
+    <view class="order_shopping_left"><image src="{{swiperList}}"></image></view>
+    <view class="order_shopping_center">
+      <view>{{shopping_name}}</view>
+      <view class="order_shopping_center_text">￥{{shopping_price}}</view>
+    </view>
+    <view class="order_shopping_right">×{{shoppingNum}}</view>
+  </view>
+  <!-- 商品-E -->
+  <!-- 价格 -->
+  <view class="order_price">
+    <view class="order_price_top">
+      <view class="order_price_top_left">商品金额</view>
+      <view class="order_price_top_right">￥{{shopping_price}}</view>
+    </view>
+    <view class="order_price_top">
+      <view class="order_price_top_left">优惠券</view>
+      <view class="order_price_top_right">无可用 <image src="http://m.qpic.cn/psc?/V12iywoj40T291/qWkkGOdvaHRbO0s2SzmJ0OoAKDHE4XjVCcNleqkJjGNB7PFaCmYk5lDgG0aK4BeE0e8ddJ4adFaBC8LYdijNyQ!!/b&bo=MAAwAAAAAAADByI!&rf=viewer_4&t=5"></image> </view>
+    </view>
+  </view>
+  <!-- 价格-E -->
+  <!-- 备注 -->
+  <view class="order_bz">
+    <van-cell-group>
+      <van-field
+        value="{{ username }}"
+        clearable
+        label="备注"
+        placeholder="备注特殊要求或给团长留言"
+      />
+    </van-cell-group>
+  </view>
+  <!-- 备注-E -->
+  <!-- 提交订单 -->
+      <van-submit-bar
+        price="{{gj}}"
+        button-text="确认支付"
+        bind:submit="onSubmit"
+      />
+
+  <!-- 提交订单-E -->
+
+
+
+
+
+
+
+
+</view>

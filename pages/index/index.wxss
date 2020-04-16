@@ -1,0 +1,388 @@
+/**index.wxss**/
+/* 自定义顶部栏高度 */
+.nav{
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.nav-title{
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  font-family:PingFang-SC-Medium;
+  font-size:36rpx;
+  letter-spacing:2px;
+}
+.nav-logo{
+  width: 20%;
+  height: 40px;
+  line-height: 45px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  font-family:PingFang-SC-Medium;
+  font-size:36rpx;
+  letter-spacing:2px;
+}
+.nav-logo image{
+  height: 30px;
+  width: 55px;
+}
+.nav .back{
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 15px;
+}
+.bg-white{
+  background-color:#fff;
+}
+.bg-gray{
+  background-color: #f7f7f7;
+}
+.overflow{
+  overflow: auto;
+}
+.hidden{
+  overflow: hidden;
+}
+.INinputheader{
+  width:45%;
+  height:30px;
+  background:rgba(233, 229, 229, 0.666);
+  border-radius:30px;
+  font-size: 14px;
+  margin-top:7px;
+  /* position: relative;  */
+  float:right;
+  margin-right:110px;
+}
+.INsearchicon{
+  position: absolute;
+  left:80px;
+ 
+}
+.weui-input{
+  height: 30px;
+  line-height: 30px;
+  text-align: left; 
+  padding-left: 30px;
+  letter-spacing:0px;
+}
+.INtab{
+  text-align: left;
+  margin-left: 12px;
+  color: #fff;
+}
+/* 头部信息 */
+.index-head{
+  margin-top: 22%;
+  width: 100%;
+  border-top: 1px solid #E6E6E6;
+  display: flex;
+  justify-content: start;
+  padding: 3%;
+  font-size: 25rpx;
+}
+.head_img{
+  width: 20%;
+  text-align: center;
+  width: 100rpx; 
+  height: 100rpx;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.head_name{
+  padding-left: 2%;
+  width: 50%;
+}
+.name_dz{
+  margin-top: 3%;
+  margin-left: 1%;
+  font-size: 20rpx;
+  color: #00FF33;
+}
+.name_dz image{
+  width: 25rpx;
+  height: 25rpx;
+}
+.head_right_l {
+  width: 15%;
+  font-size: 23rpx;
+  text-align: center;
+  color:#7A7A7A ;
+}
+.head_right_l image{
+  width: 45rpx;
+  height: 45rpx;
+}
+/* 分享 */
+.fx{
+  padding: 3%;
+}
+.fx_head{
+  font-size: 40rpx;
+  text-align: center;
+  padding: 5% 0 5% 0;
+}
+.fx_but{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.fx_but view{
+  width: 50%;
+  font-size: 30rpx;
+  text-align: center;
+}
+.fx_but button{
+  border: none;
+}
+/* 轮播 */
+.lb{
+  width: 96%;
+  margin-left: 2%;
+  height: 200rpx;
+  border-radius: 5%;
+}
+.lb image{
+  width: 100%;
+  height: 200rpx;
+  border-radius: 5rpx;
+}
+/* 下方背景 */
+.bottom{
+  background-color:#F8F8FF;
+  /* background-color: red; */
+
+  width: 100%;
+}
+/* 今日团购 */
+.index_tg{
+  padding: 3% 0 2% 0;
+  width: 96%;
+  margin-left: 2%;
+  display: flex;
+  justify-content: start;
+}
+.tg_left{
+  font-size: 35rpx;
+  width: 20%;
+  font-weight: bold;
+}
+.tg_center{
+  width: 40%;
+  font-size:24rpx;
+  margin-top:2% ;
+}
+.tg_center_top{
+  font-size:20rpx;
+  color: #ABABAB;
+  margin-right: 2%;
+}
+.tg_center_bottom{
+  background:#F9524A;
+  border-radius:6rpx;
+  color:#fff;
+  padding:2rpx 6rpx;
+}
+.tg_right{
+  width: 40%;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #00FF33;
+  margin-top: 2%;
+}
+/* 团购导航栏 */
+.tg_nav{
+  display: flex;
+  justify-content: space-around;
+  width: 96%;
+  margin-left: 2%;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 20rpx;
+  padding: 2% 0 2% 0;
+}
+.tg_nav_img{
+  width: 18%;
+  font-size: 20rpx;
+  padding: 1% 0 1% 0;
+
+}
+.tg_nav_img image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 35rpx;
+}
+/* 限时秒杀 */
+.index_ms{
+  width: 96%;
+  margin-left: 2%;
+  background: red;
+  border-radius: 20rpx;
+  padding: 2% 0 0 0;
+  margin-top: 2%;
+}
+.ms_top{
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  font-size: 30rpx;
+  padding-left: 2%;
+  padding-bottom: 1%;
+  border-radius: 20rpx;
+}
+.ms_top_left{
+  border-right: 1px solid white;
+  width: 15%;
+}
+.ms_top_center{
+  width: 20%;
+  text-align: center;
+}
+.ms_top_right{
+  width: 25%;
+  text-align: center;
+  padding-top: 3%;
+}
+.ms_bottom{
+  display: flex;
+  background-color: white;
+  justify-content: start;
+  padding-top: 2%;
+}
+.ms_bottom image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.ms_bottom_left{
+  width: 35%;
+}
+.ms_bottom_right{
+  width: 55%;
+  font-size: 20rpx;
+  color: #ABABAB;
+}
+.jd{
+  margin-top: 10%;
+  margin-bottom:2%;
+  width: 60%;
+}
+.ms_bottom_center{
+  width: 20%;
+}
+.index_but{
+  background: darkgray;
+  font-size: 25rpx;
+  width: 100rpx;
+  height: 50rpx;
+  text-align: center;
+  border-radius: 50rpx;
+  color: white;
+  padding-top: 3%;
+  margin-top: 70%;
+}
+/* 果蔬专区 */
+.index_gs{
+  padding: 2% 0 2% 0;
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 1%;
+  display: flex;
+  font-size: 35rpx;
+  font-weight: bold;
+  justify-content: start;
+  background: white;
+  border-radius: 20rpx;
+}
+.gs_left{
+  width: 48%;
+  padding-left: 2%;
+}
+.gs_right{
+  width: 50%;
+}
+.gs_left_top{
+  font-size: 30rpx;
+  color: #FF6600;
+  font-weight: normal;
+}
+.gs_left_bottom{
+  width: 30%;
+  text-align: center;
+  font-weight: normal;
+  font-size: 30rpx;
+  color: white;
+  background:#FF6600 ;
+  border-radius: 50rpx;
+  margin-top: 10%;
+}
+.gs_right image{
+  width: 150rpx;
+  height: 150rpx;
+  margin-left: 5%;
+}
+/* 商品标签栏 */
+.shopping{
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 2%;
+  font-size: 35rpx;
+}
+.shopping image{
+  width: 250rpx;
+  height: 250rpx;
+}
+.shopping_content{
+  display: flex;
+  justify-content: start;
+  padding: 2%;
+  background: white;
+  margin-bottom: 2%;
+}
+.content_left{
+  width: 40%;
+}
+.content_left_bottom{
+  font-size: 25rpx;
+  color:#ABABAB;
+}
+.content_right{
+  width: 60%;
+}
+.content_right_cent{
+  font-size: 28rpx;
+  color: #ABABAB;
+}
+.content_right_top{
+  font-size: 25rpx;
+  background: #FF6600;
+  color: white;
+  width: 25%;
+  text-align: center;
+  border-radius: 20rpx;
+  margin-top: 5%;
+}
+.content_right_bottom{
+  font-size: 35rpx;
+  color: #FF6600;
+  margin-top: 17%;
+}
+.content_right_bottom button{
+  margin-left: 40%;
+}
+.content_but{
+  width: 10px;
+}

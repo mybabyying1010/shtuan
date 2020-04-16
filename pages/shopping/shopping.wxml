@@ -1,0 +1,29 @@
+<!--pages/shopping/shopping.wxml-->
+<view class="shopping_back">
+<!-- 购物车商品 -->
+	<block wx:for="{{shopping_list}}" wx:key="index" >
+		<view class="shopping_list" >
+			<view class="shopping_list_left">
+				<image src="{{item.url}}"></image>
+			</view>
+			<view class="shopping_list_right">
+				<view>{{item.name}}</view>
+				<view class="shopping_list_right_top">
+					<view>￥{{item.price}}</view>
+					<view  ><van-stepper data-name="{{item.name}}"  bind:change="onChange" value="{{ value }}" integer /></view>
+				</view>
+			</view>
+		</view>
+	</block>
+	<!-- 去支付 -->
+	<view class="bottom">
+		<view class="pay">
+			<view	class="pay_left"></view>
+			<view class="pay_center">合计({{gj_num}}件): <text>￥{{gj_price}}</text> </view>
+			<view class="pay_right">
+				<van-button round type="primary" size="small">去支付</van-button>
+			</view>
+		</view>
+	</view>
+	
+</view>

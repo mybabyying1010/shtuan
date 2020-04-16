@@ -1,0 +1,6 @@
+<!--pages/index_poster/index_poster.wxml-->
+<view>
+		<canvas class="can" canvas-id="mycan"></canvas>
+		<button class="but" bindtap="bye">保存海报</button>
+</view>
+

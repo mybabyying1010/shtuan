@@ -1,0 +1,66 @@
+<!--pages/my/my.wxml-->
+<!-- 我的头部 -->
+<view class="my_head">
+  <view class="head_left">
+    <open-data type="userAvatarUrl"></open-data>
+</view>
+  <view class="head_center">
+    <open-data type="userNickName" open-gid="userNickName">{{userNickName}}</open-data>
+    <view class="head_center_text">用户ID：94666891</view>
+  </view>
+  <view class="head_right">
+    <image src="http://m.qpic.cn/psc?/V12iywoj40T291/qWkkGOdvaHRbO0s2SzmJ0JArGYA6EG.AohJXvJQo7o8p*2.ifmY9RKpcIrxr8RDZEwWFUPG4ZGsyuKGErR2otA!!/b&bo=MAAwAAAAAAADByI!&rf=viewer_4&t=5"></image>
+  </view>
+</view>
+<!-- 背景 -->
+<view class="my_back">
+  <!-- 我的订单 -->
+<view class="my_order">
+  <view class="order_top">
+    <view>我的订单</view>
+    <view class="oder_top_text">查看全部></view>
+  </view>
+  <view class="order_bottom">
+    <view>
+      <view><image src="http://m.qpic.cn/psc?/V12iywoj40T291/qWkkGOdvaHRbO0s2SzmJ0BsE7psuTeiWGRbre210uqynlSR7bb1Gb59nY*rKQaEtt8FPSx9hnJv.7CaX6OEelA!!/b&bo=OAAwAAAAAAADByo!&rf=viewer_4&t=5"></image></view>
+      <view>待支付</view>
+    </view>
+    <view>
+      <view><image src="http://m.qpic.cn/psc?/V12iywoj40T291/OgsY8p8GsL2M2s50.OYmep5wc0jk*VUKDOofW*cqUdYGzo35cjxDcyJ425UDE5xOYX1Gh0Z9O7ffgGfx.tz8PcaDPKWBjotHPz3pCnYV8SI!/b&bo=MAAwAAAAAAADFzI!&rf=viewer_4&t=5"></image></view>
+      <view>待收货</view>
+    </view>
+    <view>
+      <view><image src="http://m.qpic.cn/psc?/V12iywoj40T291/OgsY8p8GsL2M2s50.OYmevUl*9TuQztvqeOihMHVk5uZNZJddK1kM2Mz9Z8ftHN7TGVNEkXLhPFlvWoUQugbIBw2PhYeB5uFXQFNhY0QVlU!/b&bo=MAAwAAAAAAADFzI!&rf=viewer_4"></image></view>
+      <view>已完成</view>
+    </view>
+    <view>
+      <view><image src="http://m.qpic.cn/psc?/V12iywoj40T291/OgsY8p8GsL2M2s50.OYmemG0dkzdWsvi94teNMRWFTt1w3cnsLjG2hyJq0QUxN.6.bDQ91d3JxelcEFG7MPr*ylw1hopvaPDirt6gAgcwaQ!/b&bo=MAAwAAAAAAADFzI!&rf=viewer_4&t=5"></image></view>
+      <view>已取消</view>
+    </view>
+  </view>
+</view>
+<!-- 邀请好友 -->
+<view class="my_friend">
+  <image src="http://m.qpic.cn/psc?/V12iywoj40T291/qWkkGOdvaHRbO0s2SzmJ0NgKGj1flUIetN*1TG2XyQqCNE2mmrg5sfooRTKv5DKAynyNZh78Mz6jK.M49AQ4EA!!/b&bo=YAYdAgAAAAARB0k!&rf=viewer_4"></image>
+</view>
+<!-- 我的菜单 -->
+<view class="my_nav">
+  <view class="nav">
+    <view>申请团长</view>
+    <view><image src="http://m.qpic.cn/psc?/V12iywoj40T291/qWkkGOdvaHRbO0s2SzmJ0OoAKDHE4XjVCcNleqkJjGNB7PFaCmYk5lDgG0aK4BeE0e8ddJ4adFaBC8LYdijNyQ!!/b&bo=MAAwAAAAAAADByI!&rf=viewer_4&t=5"></image></view>
+  </view>
+  <view class="nav">
+    <view>优惠券</view>
+    <view><image src="http://m.qpic.cn/psc?/V12iywoj40T291/qWkkGOdvaHRbO0s2SzmJ0OoAKDHE4XjVCcNleqkJjGNB7PFaCmYk5lDgG0aK4BeE0e8ddJ4adFaBC8LYdijNyQ!!/b&bo=MAAwAAAAAAADByI!&rf=viewer_4&t=5"></image></view>
+  </view>
+  <view class="nav">
+    <view>设置默认团长</view>
+    <view><image src="http://m.qpic.cn/psc?/V12iywoj40T291/qWkkGOdvaHRbO0s2SzmJ0OoAKDHE4XjVCcNleqkJjGNB7PFaCmYk5lDgG0aK4BeE0e8ddJ4adFaBC8LYdijNyQ!!/b&bo=MAAwAAAAAAADByI!&rf=viewer_4&t=5"></image></view>
+  </view>
+  <view class="nav_bottom">
+    <view>关于十荟团</view>
+    <view><image src="http://m.qpic.cn/psc?/V12iywoj40T291/qWkkGOdvaHRbO0s2SzmJ0OoAKDHE4XjVCcNleqkJjGNB7PFaCmYk5lDgG0aK4BeE0e8ddJ4adFaBC8LYdijNyQ!!/b&bo=MAAwAAAAAAADByI!&rf=viewer_4&t=5"></image></view>
+  </view>
+</view>
+</view>
+

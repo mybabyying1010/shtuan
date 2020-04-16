@@ -1,0 +1,212 @@
+<!--pages/classify/classify.wxml-->
+<view class='productNav'>
+  <!-- 左侧 -->
+  <view class='left'>
+    <view class="{{active==0?'selected':'normal'}}" id="0" bindtap='switchNav'>为您推荐</view>
+    <view class="{{active==1?'selected':'normal'}}" id="1" bindtap='switchNav'>包邮到家</view>
+    <view class="{{active==2?'selected':'normal'}}" id="2" bindtap='switchNav'>新人专享</view>
+    <view class="{{active==3?'selected':'normal'}}" id="3" bindtap='switchNav'>直播商品</view>
+    <view class="{{active==4?'selected':'normal'}}" id="4" bindtap='switchNav'>惠享生活</view>
+    <view class="{{active==5?'selected':'normal'}}" id="5" bindtap='switchNav'>批发管</view>
+    <view class="{{active==6?'selected':'normal'}}" id="6" bindtap='switchNav'>新鲜蔬菜</view>
+    <view class="{{active==7?'selected':'normal'}}" id="7" bindtap='switchNav'>酒水乳品</view>
+    <view class="{{active==8?'selected':'normal'}}" id="8" bindtap='switchNav'>新华绿植</view>
+    <view class="{{active==9?'selected':'normal'}}" id="9" bindtap='switchNav'>肉禽蛋品</view>
+    <!-- <view class="{{active==10?'selected':'normal'}}" id="10" bindtap='switchNav'>居家百货</view>
+    <view class="{{active==11?'selected':'normal'}}" id="11" bindtap='switchNav'>粮油调味</view> -->
+
+  </view>
+  <!-- 右侧 -->
+  <view class='right'>
+    <view class='type'>
+      <!-- current:当前所在滑块的 index -->
+      <!-- vertical:滑动方向是否为纵向 -->
+      <swiper current='{{currentTab}}' vertical='{{true}}'>
+        <!-- catchtouchmove 阻止弹窗后滚动穿透 -->
+        <swiper-item id="0" catchtouchmove="false">
+         <block wx:for="{{shopping}}"  wx:key="index">
+         <view class="shopping_content">
+            <van-card
+              price="{{item.price}}"
+              desc="{{item.ms}}"
+              title="{{item.name}}"
+              tag="{{item.bq}}"
+              thumb="{{ item.url }}"
+          >
+            <view class="but" slot="footer">
+              <van-button size="mini" type="primary">立即买</van-button>
+            </view>
+            </van-card>
+         </view>
+            
+         </block>
+        </swiper-item>
+        <swiper-item id="1" catchtouchmove="false">
+          <block wx:for="{{shopping_by}}"  wx:key="index">
+            <van-card
+            price="{{item.price}}"
+            desc="{{item.ms}}"
+            title="{{item.name}}"
+            tag="{{item.bq}}"
+            thumb="{{ item.url }}"
+        >
+          <view class="but" slot="footer">
+            <van-button size="mini" type="primary">立即买</van-button>
+          </view>
+          </van-card>
+         </block>
+        </swiper-item>
+        <swiper-item id="2" catchtouchmove="false">
+          <block wx:for="{{shopping_by}}"  wx:key="index">
+            <van-card
+            price="{{item.price}}"
+            desc="{{item.ms}}"
+            title="{{item.name}}"
+            tag="{{item.bq}}"
+            thumb="{{ item.url }}"
+        >
+          <view class="but" slot="footer">
+            <van-button size="mini" type="primary">立即买</van-button>
+          </view>
+          </van-card>
+         </block>
+        </swiper-item>
+        <swiper-item id="3" catchtouchmove="false">
+          <block wx:for="{{shopping_by}}"  wx:key="index">
+            <van-card
+            price="{{item.price}}"
+            desc="{{item.ms}}"
+            title="{{item.name}}"
+            tag="{{item.bq}}"
+            thumb="{{ item.url }}"
+        >
+          <view class="but" slot="footer">
+            <van-button size="mini" type="primary">立即买</van-button>
+          </view>
+          </van-card>
+         </block>
+        </swiper-item>
+        <swiper-item id="4" catchtouchmove="false">
+          <block wx:for="{{shopping_by}}"  wx:key="index">
+            <van-card
+            price="{{item.price}}"
+            desc="{{item.ms}}"
+            title="{{item.name}}"
+            tag="{{item.bq}}"
+            thumb="{{ item.url }}"
+        >
+          <view class="but" slot="footer">
+            <van-button size="mini" type="primary">立即买</van-button>
+          </view>
+          </van-card>
+         </block>
+        </swiper-item>
+        <swiper-item id="5" catchtouchmove="false">
+          <block wx:for="{{shopping_by}}"  wx:key="index">
+            <van-card
+            price="{{item.price}}"
+            desc="{{item.ms}}"
+            title="{{item.name}}"
+            tag="{{item.bq}}"
+            thumb="{{ item.url }}"
+        >
+          <view class="but" slot="footer">
+            <van-button size="mini" type="primary">立即买</van-button>
+          </view>
+          </van-card>
+         </block>
+        </swiper-item>
+        <swiper-item id="6" catchtouchmove="false">
+          <block wx:for="{{shopping_by}}"  wx:key="index">
+            <van-card
+            price="{{item.price}}"
+            desc="{{item.ms}}"
+            title="{{item.name}}"
+            tag="{{item.bq}}"
+            thumb="{{ item.url }}"
+        >
+          <view class="but" slot="footer">
+            <van-button size="mini" type="primary">立即买</van-button>
+          </view>
+          </van-card>
+         </block>
+        </swiper-item>
+        <swiper-item id="7" catchtouchmove="false">
+          <block wx:for="{{shopping_by}}"  wx:key="index">
+            <van-card
+            price="{{item.price}}"
+            desc="{{item.ms}}"
+            title="{{item.name}}"
+            tag="{{item.bq}}"
+            thumb="{{ item.url }}"
+        >
+          <view class="but" slot="footer">
+            <van-button size="mini" type="primary">立即买</van-button>
+          </view>
+          </van-card>
+         </block>
+        </swiper-item>
+        <swiper-item id="8" catchtouchmove="false">
+          <block wx:for="{{shopping_by}}"  wx:key="index">
+            <van-card
+            price="{{item.price}}"
+            desc="{{item.ms}}"
+            title="{{item.name}}"
+            tag="{{item.bq}}"
+            thumb="{{ item.url }}"
+        >
+          <view class="but" slot="footer">
+            <van-button size="mini" type="primary">立即买</van-button>
+          </view>
+          </van-card>
+         </block>
+        </swiper-item>
+        <swiper-item id="9" catchtouchmove="false">
+          <block wx:for="{{shopping_by}}"  wx:key="index">
+            <van-card
+            price="{{item.price}}"
+            desc="{{item.ms}}"
+            title="{{item.name}}"
+            tag="{{item.bq}}"
+            thumb="{{ item.url }}"
+        >
+          <view class="but" slot="footer">
+            <van-button size="mini" type="primary">立即买</van-button>
+          </view>
+          </van-card>
+         </block>
+        </swiper-item>
+        <swiper-item id="10" catchtouchmove="false">
+          <block wx:for="{{shopping_by}}"  wx:key="index">
+            <van-card
+            price="{{item.price}}"
+            desc="{{item.ms}}"
+            title="{{item.name}}"
+            tag="{{item.bq}}"
+            thumb="{{ item.url }}"
+        >
+          <view class="but" slot="footer">
+            <van-button size="mini" type="primary">立即买</van-button>
+          </view>
+          </van-card>
+         </block>
+        </swiper-item>
+        <swiper-item id="11" catchtouchmove="false">
+          <block wx:for="{{shopping_by}}"  wx:key="index">
+            <van-card
+            price="{{item.price}}"
+            desc="{{item.ms}}"
+            title="{{item.name}}"
+            tag="{{item.bq}}"
+            thumb="{{ item.url }}"
+        >
+          <view class="but" slot="footer">
+            <van-button size="mini" type="primary">立即买</van-button>
+          </view>
+          </van-card>
+         </block>
+        </swiper-item>
+      </swiper> 
+    </view>
+  </view>
+</view>
